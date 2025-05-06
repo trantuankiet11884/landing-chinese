@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Headphones, MessageCircle, BookOpen, PenTool } from "lucide-react";
+import React from "react";
 
 const LearningApproachSection = () => {
   const pillars = [
@@ -29,17 +30,17 @@ const LearningApproachSection = () => {
   ];
 
   return (
-    <section className="bg-teal-50 py-16 md:py-24">
+    <section className="bg-cyan-50 py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-sm text-teal-800">
+            <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
               Our Methodology
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-teal-900">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
               The 365 Master Chinese Learning Approach
             </h2>
-            <p className="max-w-[700px] text-teal-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[700px] text-cyan-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our proven 4-pillar methodology ensures effective and enjoyable
               learning
             </p>
@@ -55,13 +56,20 @@ const LearningApproachSection = () => {
               viewport={{ once: true }}
               className="flex flex-col items-center space-y-3 rounded-lg border bg-white p-6 shadow-sm"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
-                {pillar.icon}
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-cyan-100">
+                {pillar.icon.type === Headphones ||
+                pillar.icon.type === MessageCircle ||
+                pillar.icon.type === BookOpen ||
+                pillar.icon.type === PenTool
+                  ? React.cloneElement(pillar.icon, {
+                      className: "h-10 w-10 text-cyan-600",
+                    })
+                  : pillar.icon}
               </div>
-              <h3 className="text-xl font-bold text-teal-900">
+              <h3 className="text-xl font-bold text-cyan-900">
                 {pillar.title}
               </h3>
-              <p className="text-center text-teal-600">{pillar.description}</p>
+              <p className="text-center text-cyan-600">{pillar.description}</p>
             </motion.div>
           ))}
         </div>

@@ -63,7 +63,7 @@ export default function AboutUsPage() {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-[#f0f4ff] to-white py-20 md:py-28">
+        <section className="relative bg-gradient-to-b from-cyan-50 to-white py-20 md:py-28">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <motion.div
@@ -72,20 +72,20 @@ export default function AboutUsPage() {
                 transition={{ duration: 0.5 }}
                 className="flex flex-col justify-center space-y-4"
               >
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800 mb-2">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800 mb-2">
                   About 365 Master
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-cyan-900">
                   Transforming Language Learning Since 2015
                 </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl">
+                <p className="max-w-[600px] text-cyan-600 md:text-xl">
                   We're on a mission to make language learning effective,
                   enjoyable, and accessible to everyone around the world.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Button
                     size="lg"
-                    className="bg-blue-600 hover:bg-blue-700"
+                    className="bg-cyan-600 hover:bg-cyan-700"
                     asChild
                   >
                     <Link href="#our-story">
@@ -93,7 +93,12 @@ export default function AboutUsPage() {
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-cyan-300 text-cyan-700 hover:bg-cyan-50"
+                    asChild
+                  >
                     <Link href="#meet-the-team">Meet Our Team</Link>
                   </Button>
                 </div>
@@ -115,12 +120,14 @@ export default function AboutUsPage() {
                 </div>
                 <div className="absolute -bottom-6 -left-6 rounded-lg bg-white p-4 shadow-lg">
                   <div className="flex items-center space-x-2">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
-                      <Globe className="h-5 w-5 text-blue-600" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
+                      <Globe className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium">Global Reach</p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-sm font-medium text-cyan-900">
+                        Global Reach
+                      </p>
+                      <p className="text-xs text-cyan-500">
                         Students in 50+ countries
                       </p>
                     </div>
@@ -128,12 +135,14 @@ export default function AboutUsPage() {
                 </div>
                 <div className="absolute -top-6 -right-6 rounded-lg bg-white p-4 shadow-lg">
                   <div className="flex items-center space-x-2">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
-                      <Users className="h-5 w-5 text-green-600" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
+                      <Users className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium">Growing Community</p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-sm font-medium text-cyan-900">
+                        Growing Community
+                      </p>
+                      <p className="text-xs text-cyan-500">
                         100,000+ active learners
                       </p>
                     </div>
@@ -149,10 +158,10 @@ export default function AboutUsPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
                   Our Story
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
                   How 365 Master Began
                 </h2>
               </div>
@@ -169,12 +178,14 @@ export default function AboutUsPage() {
                 </div>
                 <div className="absolute -bottom-6 -right-6 rounded-lg bg-white p-4 shadow-lg">
                   <div className="flex items-center space-x-2">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
-                      <Award className="h-5 w-5 text-blue-600" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
+                      <Award className="h-5 w-5 text-cyan-600" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium">Founded in 2015</p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-sm font-medium text-cyan-900">
+                        Founded in 2015
+                      </p>
+                      <p className="text-xs text-cyan-500">
                         By language enthusiasts
                       </p>
                     </div>
@@ -182,24 +193,24 @@ export default function AboutUsPage() {
                 </div>
               </div>
               <div className="space-y-6">
-                <p className="text-gray-500 md:text-lg">
+                <p className="text-cyan-600 md:text-lg">
                   365 Master was born from a simple observation: traditional
                   language learning methods weren't working for most people. Our
                   founder, David Chen, experienced this frustration firsthand
                   while trying to learn multiple languages.
                 </p>
-                <p className="text-gray-500 md:text-lg">
+                <p className="text-cyan-600 md:text-lg">
                   After years as a language professor, David assembled a team of
                   linguists, educators, and technologists with a shared vision:
                   to create a language learning platform that actually works.
                 </p>
-                <p className="text-gray-500 md:text-lg">
+                <p className="text-cyan-600 md:text-lg">
                   We launched in 2015 with just two languages and a handful of
                   students. Today, we offer courses in 10+ languages to over
                   100,000 active learners worldwide, with a team of 50+
                   dedicated language experts.
                 </p>
-                <p className="text-gray-500 md:text-lg">
+                <p className="text-cyan-600 md:text-lg">
                   Our mission remains the same: to break down language barriers
                   and make effective language learning accessible to everyone,
                   regardless of their background or circumstances.
@@ -210,17 +221,17 @@ export default function AboutUsPage() {
         </section>
 
         {/* Our Values */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-cyan-50 py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
                   Our Values
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
                   What We Stand For
                 </h2>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+                <p className="max-w-[700px] text-cyan-600 md:text-xl/relaxed">
                   The principles that guide everything we do
                 </p>
               </div>
@@ -228,37 +239,37 @@ export default function AboutUsPage() {
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  icon: <Globe className="h-10 w-10 text-blue-600" />,
+                  icon: <Globe className="h-10 w-10 text-cyan-600" />,
                   title: "Accessibility",
                   description:
                     "Making quality language education available to everyone, regardless of location or background",
                 },
                 {
-                  icon: <Users className="h-10 w-10 text-blue-600" />,
+                  icon: <Users className="h-10 w-10 text-cyan-600" />,
                   title: "Community",
                   description:
                     "Building connections between learners and native speakers to enhance the learning experience",
                 },
                 {
-                  icon: <BookOpen className="h-10 w-10 text-blue-600" />,
+                  icon: <BookOpen className="h-10 w-10 text-cyan-600" />,
                   title: "Effectiveness",
                   description:
                     "Creating methods that actually work, based on research and real-world results",
                 },
                 {
-                  icon: <CheckCircle className="h-10 w-10 text-blue-600" />,
+                  icon: <CheckCircle className="h-10 w-10 text-cyan-600" />,
                   title: "Quality",
                   description:
                     "Maintaining the highest standards in our curriculum, teachers, and technology",
                 },
                 {
-                  icon: <Award className="h-10 w-10 text-blue-600" />,
+                  icon: <Award className="h-10 w-10 text-cyan-600" />,
                   title: "Innovation",
                   description:
                     "Constantly improving our methods and technology to enhance the learning experience",
                 },
                 {
-                  icon: <Mail className="h-10 w-10 text-blue-600" />,
+                  icon: <Mail className="h-10 w-10 text-cyan-600" />,
                   title: "Responsiveness",
                   description:
                     "Listening to our students and adapting to their needs and feedback",
@@ -270,13 +281,15 @@ export default function AboutUsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center space-y-3 rounded-lg border bg-white p-6 shadow-sm"
+                  className="flex flex-col items-center space-y-3 rounded-lg border border-cyan-200 bg-white p-6 shadow-sm"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-50">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-cyan-50">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-bold">{value.title}</h3>
-                  <p className="text-center text-gray-500">
+                  <h3 className="text-xl font-bold text-cyan-900">
+                    {value.title}
+                  </h3>
+                  <p className="text-center text-cyan-600">
                     {value.description}
                   </p>
                 </motion.div>
@@ -290,13 +303,13 @@ export default function AboutUsPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
                   Our Team
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
                   Meet the People Behind 365 Master
                 </h2>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+                <p className="max-w-[700px] text-cyan-600 md:text-xl/relaxed">
                   Passionate educators and innovators dedicated to transforming
                   language learning
                 </p>
@@ -310,7 +323,7 @@ export default function AboutUsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center space-y-3 rounded-lg border p-6 shadow-sm"
+                  className="flex flex-col items-center space-y-3 rounded-lg border border-cyan-200 p-6 shadow-sm"
                 >
                   <div className="h-32 w-32 overflow-hidden rounded-full">
                     <Image
@@ -321,9 +334,11 @@ export default function AboutUsPage() {
                       className="h-full w-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-blue-600 font-medium">{member.role}</p>
-                  <p className="text-center text-gray-500">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-cyan-900">
+                    {member.name}
+                  </h3>
+                  <p className="text-cyan-600 font-medium">{member.role}</p>
+                  <p className="text-center text-cyan-600">{member.bio}</p>
                 </motion.div>
               ))}
             </div>
@@ -331,17 +346,17 @@ export default function AboutUsPage() {
         </section>
 
         {/* Achievements */}
-        <section className="bg-gray-50 py-16 md:py-24">
+        <section className="bg-cyan-50 py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
                   Our Impact
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
                   Achievements & Milestones
                 </h2>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+                <p className="max-w-[700px] text-cyan-600 md:text-xl/relaxed">
                   The journey so far and the difference we've made
                 </p>
               </div>
@@ -375,21 +390,25 @@ export default function AboutUsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center space-y-2 rounded-lg border bg-white p-6 shadow-sm"
+                  className="flex flex-col items-center space-y-2 rounded-lg border border-cyan-200 bg-white p-6 shadow-sm"
                 >
-                  <div className="text-3xl font-bold text-blue-600">
+                  <div className="text-3xl font-bold text-cyan-600">
                     {stat.number}
                   </div>
-                  <h3 className="text-lg font-bold">{stat.label}</h3>
-                  <p className="text-center text-sm text-gray-500">
+                  <h3 className="text-lg font-bold text-cyan-900">
+                    {stat.label}
+                  </h3>
+                  <p className="text-center text-sm text-cyan-600">
                     {stat.description}
                   </p>
                 </motion.div>
               ))}
             </div>
             <div className="mt-12 space-y-6">
-              <div className="rounded-lg border bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-bold mb-4">Our Journey</h3>
+              <div className="rounded-lg border border-cyan-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-4 text-cyan-900">
+                  Our Journey
+                </h3>
                 <div className="space-y-4">
                   {[
                     {
@@ -425,18 +444,18 @@ export default function AboutUsPage() {
                   ].map((milestone, index) => (
                     <div key={index} className="flex">
                       <div className="mr-4 flex flex-col items-center">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100 text-cyan-600 font-bold">
                           {milestone.year.substring(2)}
                         </div>
                         {index < 4 && (
-                          <div className="h-full w-0.5 bg-blue-100"></div>
+                          <div className="h-full w-0.5 bg-cyan-100"></div>
                         )}
                       </div>
                       <div className="pb-4">
-                        <h4 className="text-lg font-bold">
+                        <h4 className="text-lg font-bold text-cyan-900">
                           {milestone.year}: {milestone.title}
                         </h4>
-                        <p className="text-gray-500">{milestone.description}</p>
+                        <p className="text-cyan-600">{milestone.description}</p>
                       </div>
                     </div>
                   ))}

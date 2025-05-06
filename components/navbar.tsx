@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/45 border-gray-300">
+    <header className="sticky top-0 z-50 w-full border-b bg-white backdrop-blur supports-[backdrop-filter]:bg-white/45 border-cyan-200">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
@@ -31,32 +31,32 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           <Link
             href="/"
-            className={`text-base font-semibold transition-all hover:text-[#3aaffe] hover:scale-105 duration-300 ${
-              pathname === "/" ? "text-[#3aaffe]" : ""
+            className={`text-base font-semibold transition-all hover:text-cyan-600 hover:scale-105 duration-300 ${
+              pathname === "/" ? "text-cyan-600" : ""
             }`}
           >
             Home
           </Link>
           <Link
             href="/learn-chinese"
-            className={`text-base font-semibold transition-all hover:text-[#3aaffe] hover:scale-105 duration-300 ${
-              pathname === "/learn-chinese" ? "text-[#3aaffe]" : ""
+            className={`text-base font-semibold transition-all hover:text-cyan-600 hover:scale-105 duration-300 ${
+              pathname === "/learn-chinese" ? "text-cyan-600" : ""
             }`}
           >
             Learn
           </Link>
           <Link
             href="/blog"
-            className={`text-base font-semibold transition-all hover:text-[#3aaffe] hover:scale-105 duration-300 ${
-              pathname === "/blog" ? "text-[#3aaffe]" : ""
+            className={`text-base font-semibold transition-all hover:text-cyan-600 hover:scale-105 duration-300 ${
+              pathname === "/blog" ? "text-cyan-600" : ""
             }`}
           >
             Blog
           </Link>
           <Link
             href="/about-us"
-            className={`text-base font-semibold transition-all hover:text-[#3aaffe] hover:scale-105 duration-300 ${
-              pathname === "/about-us" ? "text-[#3aaffe]" : ""
+            className={`text-base font-semibold transition-all hover:text-cyan-600 hover:scale-105 duration-300 ${
+              pathname === "/about-us" ? "text-cyan-600" : ""
             }`}
           >
             About Us
@@ -64,7 +64,11 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" size="sm">
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-cyan-300 text-cyan-700 hover:bg-cyan-50"
+          >
             Get An App
           </Button>
         </div>
@@ -72,17 +76,21 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden text-cyan-700 hover:bg-cyan-50"
+            >
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="border-l border-cyan-200">
             <div className="flex flex-col gap-6 pt-6">
               <Link
                 href="/"
                 className={`text-lg font-semibold ${
-                  pathname === "/" ? "text-[#3aaffe]" : ""
+                  pathname === "/" ? "text-cyan-600" : ""
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -91,7 +99,7 @@ export default function Navbar() {
               <Link
                 href="/learn-chinese"
                 className={`text-lg font-semibold ${
-                  pathname === "/learn-chinese" ? "text-[#3aaffe]" : ""
+                  pathname === "/learn-chinese" ? "text-cyan-600" : ""
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -100,7 +108,7 @@ export default function Navbar() {
               <Link
                 href="/blog"
                 className={`text-lg font-semibold ${
-                  pathname === "/blog" ? "text-[#3aaffe]" : ""
+                  pathname === "/blog" ? "text-cyan-600" : ""
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -109,14 +117,18 @@ export default function Navbar() {
               <Link
                 href="/about-us"
                 className={`text-lg font-semibold ${
-                  pathname === "/about-us" ? "text-[#3aaffe]" : ""
+                  pathname === "/about-us" ? "text-cyan-600" : ""
                 }`}
                 onClick={() => setIsOpen(false)}
               >
                 About Us
               </Link>
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="outline" size="sm">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-cyan-300 text-cyan-700 hover:bg-cyan-50"
+                >
                   Get An App
                 </Button>
               </div>

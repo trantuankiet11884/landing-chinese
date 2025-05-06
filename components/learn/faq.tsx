@@ -43,7 +43,7 @@ const FAQSection = () => {
     {
       question: "Is GuruLango Chinese available on multiple devices?",
       answer:
-        "Yes, it’s accessible on iOS, Android, and web platforms for seamless learning.",
+        "Yes, it's accessible on iOS, Android, and web platforms for seamless learning.",
     },
     {
       question:
@@ -86,7 +86,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-8 md:py-12 bg-teal-50">
+    <section className="py-8 md:py-12 bg-cyan-50">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -95,7 +95,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           variants={headingVariants}
         >
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-teal-900">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
             Frequently Asked Questions (FAQs)
           </h2>
         </motion.div>
@@ -114,7 +114,7 @@ const FAQSection = () => {
                   value={`item-${index}`}
                   className="border rounded-lg bg-white shadow-sm"
                 >
-                  <AccordionTrigger className="text-lg font-medium text-teal-700 px-4 py-3 text-left hover:no-underline hover:bg-teal-50">
+                  <AccordionTrigger className="text-lg font-medium text-cyan-700 px-4 py-3 text-left hover:no-underline hover:bg-cyan-50">
                     {faq.question}
                   </AccordionTrigger>
                   <AnimatePresence>
@@ -124,7 +124,7 @@ const FAQSection = () => {
                       exit="exit"
                       variants={contentVariants}
                     >
-                      <AccordionContent className="px-4 pb-4 pt-2 text-teal-600">
+                      <AccordionContent className="px-4 pb-4 pt-2 text-cyan-600">
                         {faq.answer}
                       </AccordionContent>
                     </motion.div>

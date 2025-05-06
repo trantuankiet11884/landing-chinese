@@ -131,28 +131,28 @@ export default function BlogPage() {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-[#f0f4ff] to-white py-16 md:py-24">
+        <section className="bg-gradient-to-b from-cyan-50 to-white py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm text-blue-800 mb-2">
+                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800 mb-2">
                   Language Learning Blog
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-cyan-900">
                   Insights & Tips for Language Learners
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
+                <p className="mx-auto max-w-[700px] text-cyan-600 md:text-xl">
                   Expert advice, success stories, and practical strategies to
                   accelerate your language learning journey
                 </p>
               </div>
               <div className="w-full max-w-md">
                 <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-cyan-500" />
                   <Input
                     type="search"
                     placeholder="Search articles..."
-                    className="w-full bg-white pl-9 pr-4 py-2 rounded-lg border border-gray-200"
+                    className="w-full bg-white pl-9 pr-4 py-2 rounded-lg border border-cyan-200"
                   />
                 </div>
               </div>
@@ -165,10 +165,10 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col space-y-4 md:space-y-8">
               <div className="space-y-2">
-                <h2 className="text-2xl font-bold tracking-tighter md:text-3xl">
+                <h2 className="text-2xl font-bold tracking-tighter md:text-3xl text-cyan-900">
                   Featured Articles
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-cyan-600">
                   Our most popular and informative content
                 </p>
               </div>
@@ -181,7 +181,7 @@ export default function BlogPage() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="overflow-hidden h-full flex flex-col">
+                    <Card className="overflow-hidden h-full flex flex-col border-cyan-100">
                       <div className="relative h-48 w-full overflow-hidden">
                         <Image
                           src={post.image || "/placeholder.svg"}
@@ -192,25 +192,27 @@ export default function BlogPage() {
                       </div>
                       <CardContent className="flex-1 p-5">
                         <div className="flex items-center gap-2 mb-3">
-                          <div className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                          <div className="rounded-full bg-cyan-100 px-2.5 py-0.5 text-xs font-medium text-cyan-800">
                             {post.category}
                           </div>
-                          <div className="text-xs text-gray-500">
+                          <div className="text-xs text-cyan-500">
                             {post.readTime}
                           </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                        <p className="text-sm text-gray-500 mb-4">
+                        <h3 className="text-xl font-bold mb-2 text-cyan-900">
+                          {post.title}
+                        </h3>
+                        <p className="text-sm text-cyan-600 mb-4">
                           {post.excerpt}
                         </p>
-                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-cyan-100">
                           <div className="flex items-center text-sm">
-                            <User className="mr-1 h-3 w-3 text-gray-500" />
-                            <span className="text-gray-700">{post.author}</span>
+                            <User className="mr-1 h-3 w-3 text-cyan-500" />
+                            <span className="text-cyan-700">{post.author}</span>
                           </div>
                           <div className="flex items-center text-sm">
-                            <Calendar className="mr-1 h-3 w-3 text-gray-500" />
-                            <span className="text-gray-500">{post.date}</span>
+                            <Calendar className="mr-1 h-3 w-3 text-cyan-500" />
+                            <span className="text-cyan-500">{post.date}</span>
                           </div>
                         </div>
                       </CardContent>
@@ -223,16 +225,16 @@ export default function BlogPage() {
         </section>
 
         {/* Recent Posts and Sidebar */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-12 md:py-16 bg-cyan-50">
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 lg:grid-cols-3">
               {/* Main Content - Recent Posts */}
               <div className="lg:col-span-2">
                 <div className="space-y-2 mb-8">
-                  <h2 className="text-2xl font-bold tracking-tighter md:text-3xl">
+                  <h2 className="text-2xl font-bold tracking-tighter md:text-3xl text-cyan-900">
                     Recent Articles
                   </h2>
-                  <p className="text-gray-500">
+                  <p className="text-cyan-600">
                     The latest insights from our language experts
                   </p>
                 </div>
@@ -245,7 +247,7 @@ export default function BlogPage() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                     >
-                      <Card className="overflow-hidden h-full flex flex-col">
+                      <Card className="overflow-hidden h-full flex flex-col border-cyan-100">
                         <div className="relative h-40 w-full overflow-hidden">
                           <Image
                             src={post.image || "/placeholder.svg"}
@@ -256,29 +258,29 @@ export default function BlogPage() {
                         </div>
                         <CardContent className="flex-1 p-4">
                           <div className="flex items-center gap-2 mb-2">
-                            <div className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-800">
+                            <div className="rounded-full bg-cyan-100 px-2 py-0.5 text-xs font-medium text-cyan-800">
                               {post.category}
                             </div>
-                            <div className="text-xs text-gray-500">
+                            <div className="text-xs text-cyan-500">
                               {post.readTime}
                             </div>
                           </div>
-                          <h3 className="text-lg font-bold mb-2">
+                          <h3 className="text-lg font-bold mb-2 text-cyan-900">
                             {post.title}
                           </h3>
-                          <p className="text-sm text-gray-500 mb-3 line-clamp-2">
+                          <p className="text-sm text-cyan-600 mb-3 line-clamp-2">
                             {post.excerpt}
                           </p>
-                          <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                          <div className="flex items-center justify-between mt-auto pt-3 border-t border-cyan-100">
                             <div className="flex items-center text-xs">
-                              <User className="mr-1 h-3 w-3 text-gray-500" />
-                              <span className="text-gray-700">
+                              <User className="mr-1 h-3 w-3 text-cyan-500" />
+                              <span className="text-cyan-700">
                                 {post.author}
                               </span>
                             </div>
                             <div className="flex items-center text-xs">
-                              <Calendar className="mr-1 h-3 w-3 text-gray-500" />
-                              <span className="text-gray-500">{post.date}</span>
+                              <Calendar className="mr-1 h-3 w-3 text-cyan-500" />
+                              <span className="text-cyan-500">{post.date}</span>
                             </div>
                           </div>
                         </CardContent>
@@ -287,7 +289,11 @@ export default function BlogPage() {
                   ))}
                 </div>
                 <div className="flex justify-center mt-8">
-                  <Button variant="outline" size="lg">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-cyan-300 text-cyan-700 hover:bg-cyan-50"
+                  >
                     Load More Articles
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -297,14 +303,16 @@ export default function BlogPage() {
               {/* Sidebar */}
               <div className="space-y-8">
                 {/* Categories */}
-                <Card>
+                <Card className="border-cyan-100">
                   <CardContent className="p-5">
-                    <h3 className="text-xl font-bold mb-4">Categories</h3>
+                    <h3 className="text-xl font-bold mb-4 text-cyan-900">
+                      Categories
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {categories.map((category, index) => (
                         <div
                           key={index}
-                          className="rounded-full bg-gray-100 px-3 py-1 text-sm hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-colors"
+                          className="rounded-full bg-cyan-50 px-3 py-1 text-sm hover:bg-cyan-100 hover:text-cyan-800 cursor-pointer transition-colors"
                         >
                           {category}
                         </div>
@@ -314,12 +322,12 @@ export default function BlogPage() {
                 </Card>
 
                 {/* Newsletter Signup */}
-                <Card className="bg-blue-50">
+                <Card className="bg-cyan-50 border-cyan-100">
                   <CardContent className="p-5">
-                    <h3 className="text-xl font-bold mb-2">
+                    <h3 className="text-xl font-bold mb-2 text-cyan-900">
                       Subscribe to Our Newsletter
                     </h3>
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-sm text-cyan-600 mb-4">
                       Get the latest language learning tips and resources
                       delivered to your inbox.
                     </p>
@@ -327,9 +335,9 @@ export default function BlogPage() {
                       <Input
                         type="email"
                         placeholder="Your email address"
-                        className="w-full bg-white"
+                        className="w-full bg-white border-cyan-200"
                       />
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                      <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
                         Subscribe
                       </Button>
                     </div>
@@ -337,9 +345,11 @@ export default function BlogPage() {
                 </Card>
 
                 {/* Popular Tags */}
-                <Card>
+                <Card className="border-cyan-100">
                   <CardContent className="p-5">
-                    <h3 className="text-xl font-bold mb-4">Popular Tags</h3>
+                    <h3 className="text-xl font-bold mb-4 text-cyan-900">
+                      Popular Tags
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         "Pronunciation",
@@ -355,9 +365,9 @@ export default function BlogPage() {
                       ].map((tag, index) => (
                         <div
                           key={index}
-                          className="flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-colors"
+                          className="flex items-center rounded-full bg-cyan-50 px-3 py-1 text-sm hover:bg-cyan-100 hover:text-cyan-800 cursor-pointer transition-colors"
                         >
-                          <Tag className="mr-1 h-3 w-3" />
+                          <Tag className="mr-1 h-3 w-3 text-cyan-500" />
                           {tag}
                         </div>
                       ))}

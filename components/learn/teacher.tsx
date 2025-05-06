@@ -29,17 +29,17 @@ const TeacherProfilesSection = () => {
   ];
 
   return (
-    <section className="bg-teal-50 py-8 md:py-12">
+    <section className="bg-cyan-50 py-8 md:py-12">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-sm text-teal-800">
+            <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
               Our Teachers
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-teal-900">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-cyan-900">
               Learn from Native Chinese Speakers
             </h2>
-            <p className="max-w-[700px] text-teal-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[700px] text-cyan-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our experienced teachers are passionate about helping you succeed
             </p>
           </div>
@@ -63,19 +63,19 @@ const TeacherProfilesSection = () => {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-teal-900">
+              <h3 className="text-xl font-bold text-cyan-900">
                 {teacher.name}
               </h3>
-              <p className="text-teal-600 font-medium">{teacher.role}</p>
+              <p className="text-cyan-600 font-medium">{teacher.role}</p>
               <div className="flex items-center text-yellow-400">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} className="h-4 w-4 fill-current" />
                 ))}
               </div>
-              <p className="text-center text-sm text-teal-600">
+              <p className="text-center text-sm text-cyan-600">
                 {teacher.experience}
               </p>
-              <p className="text-center text-sm font-medium text-teal-700">
+              <p className="text-center text-sm font-medium text-cyan-700">
                 Specializes in: {teacher.specialization}
               </p>
             </motion.div>
